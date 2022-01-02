@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans','Arial',sans-serif;
+    font-weight: 700;
+    background-color: firebrick; 
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: firebrick;
+}
+
+
+.hamburger {
+    font-size: 2.1rem;
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #131314;
+    transition: 0.5s;
+}
+
+.nav-link:hover{
+    color: rgb(226, 212, 186);
+}
+
+img{
+    height: 6.3rem;
+}
+
+
+div#header-main{
+    position: relative;
+    height: calc(100vh - 8.7rem);
+    background-image: url('images/pizzaHeader.jpg');
+    background-position: center;
+    background-size: cover;
+    background-position-y:center;
+    margin: 0 auto;
+    width: 100vw;
+    font-family: 'Roboto';
+}
+
+h1#order-pizza{
+    font-size: 34px;
+    padding-top: 110px;
+    color: rgb(8, 7, 7);
+    font-size:5rem;
+    
+}
+
+h1#local{
+    font-size: 27px;
+   
+}
+
+button#btn-order-pizza{
+    background-color: rgb(226, 212, 186);
+    border: none;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 20px;
+    opacity: 1;
+    animation: myMove 1.5s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 15px;
+  
+}
+
+@keyframes myMove{
+    0%{
+        margin-top: 20px;
+    }
+    50%{
+        margin-top: 35px;
+
+    }
+    100%{
+        margin-top: 20px;
+
+    }
+}
+
+div#text-div{
+    position: absolute;
+    width: 100vw;
+    height: 35vh;
+    text-align: center;
+    top: calc(30.5%);
+}
+
+/*FOOTER*/
+
+footer{
+    height: 20vh;
+    width: 100vw;
+    background-color: firebrick;
+    text-align: center;
+    
+}
+
+p.copyright{
+    font-size: 1.5em;
+}
+
+/*Login and register*/
+
+div#login-form{
+    display: none;
+}
+
+div#register-form{
+    display: none;
+}
+
+div#register-form.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    height: 70vh;
+    top: calc(50% - 35vh);
+    left: calc(50% - 25vw);
+    background-color: chocolate;
+    box-shadow: 0px 2px 10px 4px;
+    
+}
+
+div#login-form.activeLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    width: 50vw;
+    height: 70vh;
+    top: calc(50% - 35vh);
+    left: calc(50% - 25vw);
+    background-color: rgb(48, 161, 53);
+    box-shadow: 0px 2px 10px 4px;
+}
+
+div#siteBlur{
+    display: none;
+}
+
+div#siteBlur.active{
+    position: absolute;
+    display: block;
+    z-index: 4;
+    width: 100vw;
+    height: 150vh;
+    opacity: 0.7;
+    top: 0;
+    background-color: white;
+
+}
+
+h1.form-title{
+    padding-top: 10px;
+    font-size: 2.5em;
+}
+
+input.reg-input{
+    border: 2px solid black;
+    margin-top: 30px;
+    width: 200px;
+    height: 25px;
+}
+
+input#create-account{
+    background-color: firebrick;
+    height: 35px;
+    border: none;
+    width: 140px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+input#login-on-account{
+    background-color: firebrick;
+    height: 35px;
+    border: none;
+    width: 140px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+div.account-form{
+    text-align: center;
+}
+
+i.fa-window-close{
+    font-size: 3em;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    cursor:pointer;
+}
+
+i.fa-shopping-cart{
+    font-size:2.2rem;
+    padding-left: 36px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+i.fa-shopping-cart:hover{
+    color: rgb(226, 212, 186);
+}
+
+li.pizza-names{
+    height: 20px;
+    font-size: 18px;
+    color: wheat;
+}
+div.pizza{
+    margin-top: 40px;
+    text-align: center;
+    width: 300px;
+    height: 120px;
+    background-image: url('images/pizzaLogo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+div.pizzas-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 200vh;
+    background-color: black;
+}
+a.add-pizza{
+    display: inline-block;
+    width: 200px;
+    margin-top: 100px;
+    border: solid 2px wheat;
+    padding: 5px 10px;
+    background-color: firebrick;
+    font-family: 'Open Sans','Sans-serif';
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-menu {
+        position: fixed;
+        z-index: 1;
+        left: -100%;
+        top: 8.6rem;
+        flex-direction: column;
+        background-color: firebrick;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 5px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,43 @@
+<%- include('partials/nav') %>
+    <div id="login-form" class="account-form">
+        <i class="fas fa-window-close"></i>
+        <form action="">
+            <h1 class="form-title ">Zaloguj się:</h1>
+            <label for="login-account">Podaj login: </label>
+            <input type="text" id="login-account" require="required" class="reg-input"><br>
+            <label for="user-login-password">Podaj hasło: </label>
+            <input type="password" id="user-login-password" require="required" class="reg-input"><br>
+            <input type="submit" id="login-on-account" value="Zaloguj się">
+        </form>
+    </div>
+    <div id="register-form" class="account-form">
+        <i class="fas fa-window-close regClose"></i>
+        <form action="">
+            <h1 class="form-title">Załóż konto:</h1>
+            <label for="user-login">Podaj login: </label>
+            <input type="text" id="user-login" require="required" class="reg-input"><br>
+            <label for="user-password">Podaj hasło: </label>
+            <input type="password" id="user-password" require="required" class="reg-input"><br>
+            <label for="user-password-retype">Powtórz hasło: </label>
+            <input type="password" id="user-password-retype" require="required" class="reg-input"><br>
+            <input type="submit" id="create-account" value="Utwórz konto">
+        </form>
+    </div>
+    <div id="siteBlur"></div>
+    <div id="header-main">
+        <div id="text-div">
+            <h1 id="order-pizza">Zamów Pizzę online</h1>
+            <h1 id="local">Najlepszy lokal w mieście</h1>
+            <button onload="clickMe()" id="btn-order-pizza"><a id="menu" href="menu">Zamów teraz</a></button>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <h1>Kontakt:</h1>
+        <p class="copyright">&copy; Adam Wójcik 2021
+        </p>
+    </footer>
+
+    <script src="js/skrypty.js"></script>
+    </body>
+
+    </html>

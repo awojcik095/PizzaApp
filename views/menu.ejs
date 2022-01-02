@@ -1,0 +1,29 @@
+<%- include('partials/nav') %>
+
+
+    <div class="pizzas-wrapper">
+        <h1>Wybór pizzy</h1>
+        <% for(let pizza of pizzas){ %>
+            <div class="pizza">
+                <li class="pizza-names">
+                    <%= pizza.name %>
+                        <%= pizza.price + " zł" %>
+                            <br>
+                </li>
+                <br>
+                <a href="/dodaj-do-koszyka/<%=pizza.id %>" class="add-pizza" role="button">Dodaj do koszyka</a>
+            </div>
+
+            <% } %>
+    </div>
+
+    <footer id="site-footer">
+        <h1>Kontakt:</h1>
+        <p class="copyright">&copy; Adam Wójcik 2021
+        </p>
+    </footer>
+
+    <script src="../public/skrypty.js"></script>
+    </body>
+
+    </html>
