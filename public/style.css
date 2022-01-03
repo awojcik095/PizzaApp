@@ -59,7 +59,7 @@ a {
     color: rgb(226, 212, 186);
 }
 
-img{
+img#pizza-logo-img{
     height: 6.3rem;
 }
 
@@ -104,6 +104,80 @@ button#btn-order-pizza{
   
 }
 
+/*SLIDER*/
+
+div.container{
+    background-color: black;
+    width: 540px;
+    height: 350px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 30vh;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-container{
+    position: relative;
+}
+
+img.slider-img{
+    width: 500px;
+    height: 280px;
+    display: none;
+    position: relative;
+}
+
+img.img-active{
+    display: block;
+}
+
+.dot-container{
+    width: 300px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dot-container button{
+    height: 15px;
+    width: 40px;
+    border-radius: 20%;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid firebrick;
+}
+
+.dot-container button:nth-child(1){
+    background-color: firebrick;    
+}
+
+#prev, #next{
+    font-family: 'Open sans';
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background: firebrick;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: auto;
+    font-weight: bolder;
+}
+
+#prev{
+    left: 5px;
+}
+
+#next{
+    right: 5px;
+}
+
 @keyframes myMove{
     0%{
         margin-top: 20px;
@@ -129,7 +203,10 @@ div#text-div{
 /*FOOTER*/
 
 footer{
-    height: 20vh;
+    position: absolute;
+    display: block;
+    line-height: 5vh;
+    height: 10vh;
     width: 100vw;
     background-color: firebrick;
     text-align: center;
@@ -150,97 +227,9 @@ div#register-form{
     display: none;
 }
 
-div#register-form.active{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    z-index: 5;
-    width: 50vw;
-    height: 70vh;
-    top: calc(50% - 35vh);
-    left: calc(50% - 25vw);
-    background-color: chocolate;
-    box-shadow: 0px 2px 10px 4px;
-    
-}
-
-div#login-form.activeLogin{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    z-index: 5;
-    width: 50vw;
-    height: 70vh;
-    top: calc(50% - 35vh);
-    left: calc(50% - 25vw);
-    background-color: rgb(48, 161, 53);
-    box-shadow: 0px 2px 10px 4px;
-}
-
-div#siteBlur{
-    display: none;
-}
-
-div#siteBlur.active{
-    position: absolute;
-    display: block;
-    z-index: 4;
-    width: 100vw;
-    height: 150vh;
-    opacity: 0.7;
-    top: 0;
-    background-color: white;
-
-}
-
 h1.form-title{
     padding-top: 10px;
     font-size: 2.5em;
-}
-
-input.reg-input{
-    border: 2px solid black;
-    margin-top: 30px;
-    width: 200px;
-    height: 25px;
-}
-
-input#create-account{
-    background-color: firebrick;
-    height: 35px;
-    border: none;
-    width: 140px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 30px;
-    font-weight: 600;
-}
-
-input#login-on-account{
-    background-color: firebrick;
-    height: 35px;
-    border: none;
-    width: 140px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 30px;
-    font-weight: 600;
-}
-
-div.account-form{
-    text-align: center;
-}
-
-i.fa-window-close{
-    font-size: 3em;
-    position: absolute;
-    top: -2px;
-    right: 0px;
-    cursor:pointer;
 }
 
 i.fa-shopping-cart{
@@ -260,7 +249,7 @@ li.pizza-names{
     color: wheat;
 }
 div.pizza{
-    margin-top: 40px;
+    margin-bottom: 50px;
     text-align: center;
     width: 300px;
     height: 120px;
@@ -278,7 +267,7 @@ div.pizzas-wrapper{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
-    height: 200vh;
+    height: 150vh;
     background-color: black;
 }
 a.add-pizza{
@@ -291,6 +280,13 @@ a.add-pizza{
     font-family: 'Open Sans','Sans-serif';
     text-transform: uppercase;
     font-weight: 600;
+}
+
+
+h1.menu-header{
+    color: wheat;
+    margin-top: 20px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

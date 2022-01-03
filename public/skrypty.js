@@ -39,6 +39,24 @@ function showMenu() {
     navMenu.classList.toggle("active");
 }
 
+/// Slider
+
+let i = 0;
+let j = 4;
+
+const dots = document.querySelectorAll(".dot-container");
+const images = document.querySelectorAll(".image-container");
+
+function next() {
+    document.getElementById("content" + (i + 1)).classList.remove("img-active");
+    i = (j + i + 1) % j;
+
+    document.getElementById("content" +
+        (i + 1).classList.add("img-active"));
+
+    indicator(i + 1);
+}
+
 /*
 let btnOrder = document.querySelector('#btn-order-pizza')
 

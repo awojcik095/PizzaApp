@@ -50,9 +50,12 @@ app.use((req, res, next) => {
 })
 */
 
+
 app.get('/pizza', async (req, res) => {
+    req.flash('info', 'Welcome')
     res.render('pizza')
 })
+
 
 app.get('/menu', async (req, res) => {
     const pizzas = await Pizza.find({})

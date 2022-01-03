@@ -62,12 +62,6 @@ const Pizzas = [
         price: 31,
 
     },
-    {
-        id: 8,
-        name: 'Pepperoni',
-        price: 29,
-
-    }
 ]
 
 Pizza.insertMany(Pizzas)
